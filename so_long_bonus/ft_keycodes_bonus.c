@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_keycodes.c                                      :+:      :+:    :+:   */
+/*   ft_keycodes_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 20:02:29 by yaboukir          #+#    #+#             */
-/*   Updated: 2024/12/31 16:15:37 by yaboukir         ###   ########.fr       */
+/*   Updated: 2024/12/31 19:16:21 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
-void	is_door_open(t_info *pic)
+void	is_door_open(t_infob *pic)
 {
 	char	**rows;
 	int		b;
@@ -25,7 +25,7 @@ void	is_door_open(t_info *pic)
 
 int	ft_keycodes(int button, void *p)
 {
-	t_info	*pic;
+	t_infob	*pic;
 
 	pic = p;
 	if (button == 13)
@@ -45,7 +45,7 @@ int	ft_keycodes(int button, void *p)
 	return (0);
 }
 
-void	ren_again(t_info *pic, t_posi coor, char **rows)
+void	ren_again(t_infob *pic, t_posi coor, char **rows)
 {
 	mlx_put_image_to_window(pic->mlx_ptr,
 		pic->mlx_window, pic->pic_background, coor.column * 75, coor.row * 75);

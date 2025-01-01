@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   moves.c                                            :+:      :+:    :+:   */
+/*   moves_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 20:03:18 by yaboukir          #+#    #+#             */
-/*   Updated: 2024/12/31 16:22:21 by yaboukir         ###   ########.fr       */
+/*   Updated: 2024/12/31 19:14:19 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
-void	ft_moving(t_posi coor, t_info *pic, char **rows, int btn)
+void	ft_moving(t_posi coor, t_infob *pic, char **rows, int btn)
 {
 	ft_printf("%d\n", pic->move);
 	pic->move++;
@@ -30,7 +30,7 @@ void	ft_moving(t_posi coor, t_info *pic, char **rows, int btn)
 			free(pic), exit (0));
 }
 
-void	up(t_info *pic)
+void	up(t_infob *pic)
 {
 	t_posi	coor;
 	char	**rows;
@@ -51,7 +51,7 @@ void	up(t_info *pic)
 	}
 }
 
-void	down(t_info *pic)
+void	down(t_infob *pic)
 {
 	t_posi	coor;
 	char	**rows;
@@ -72,7 +72,7 @@ void	down(t_info *pic)
 	}
 }
 
-void	left(t_info *pic)
+void	left(t_infob *pic)
 {
 	t_posi	coor;
 	char	**rows;
@@ -93,7 +93,7 @@ void	left(t_info *pic)
 	}
 }
 
-void	right(t_info *pic)
+void	right(t_infob *pic)
 {
 	t_posi	coor;
 	char	**rows;
