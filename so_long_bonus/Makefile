@@ -6,7 +6,7 @@
 #    By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/30 20:03:16 by yaboukir          #+#    #+#              #
-#    Updated: 2024/12/31 19:54:05 by yaboukir         ###   ########.fr        #
+#    Updated: 2025/01/01 23:54:44 by yaboukir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRC = so_long_bonus.c game_rend_bonus.c ft_keycodes_bonus.c ft_door_bonus.c \
       get_pic_bonus.c flood_fill_bonus.c ft_putnbr_bonus.c ft_split_bonus.c \
       get_next_line_bonus.c get_next_line_utils_bonus.c ft_length_bonus.c \
       moves_bonus.c parsing_bonus.c position_bonus.c rendering_bonus.c \
-      wall_check_bonus.c ft_putstr_bonus.c
+      wall_check_bonus.c ft_putstr_bonus.c get_enemy_pack.c ft_itoa.c
 
 OBJ = $(SRC:.c=.o)
 

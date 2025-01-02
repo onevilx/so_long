@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 20:02:25 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/01 02:47:54 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/01/02 00:47:03 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ t_infob	fetch_pic(t_infob *pic, void *mlx_ptr)
 	get_texture_opendoor(pic, mlx_ptr);
 	get_texture_coin(pic, mlx_ptr);
 	get_texture_character(pic, mlx_ptr);
+	get_texture_enemy(pic, mlx_ptr);
 	open_window(pic, mlx_ptr, rows);
 	return (*pic);
 }

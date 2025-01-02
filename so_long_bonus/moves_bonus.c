@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/30 20:03:18 by yaboukir          #+#    #+#             */
-/*   Updated: 2024/12/31 19:14:19 by yaboukir         ###   ########.fr       */
+/*   Created: Invalid date        by yaboukir          #+#    #+#             */
+/*   Updated: 2025/01/02 00:46:03 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,26 @@ void	ft_moving(t_posi coor, t_infob *pic, char **rows, int btn)
 {
 	ft_printf("%d\n", pic->move);
 	pic->move++;
+
+	if (rows[(coor.row) - 1][coor.column] == 'Y' && btn == 13)
+		return (write(1, "YOU LOST! You touched an enemy!\n", 32),free(pic), exit(0));
+	else if (rows[(coor.row) + 1][coor.column] == 'Y' && btn == 1)
+		return (write(1, "YOU LOST! You touched an enemy!\n", 32), free(pic), exit(0));
+	else if (rows[coor.row][(coor.column) + 1] == 'Y' && btn == 2)
+		return (write(1, "YOU LOST! You touched an enemy!\n", 32), free(pic), exit(0));
+	else if (rows[coor.row][(coor.column) - 1] == 'Y' && btn == 0)
+		return (write(1, "YOU LOST! You touched an enemy!\n", 32), free(pic), exit(0));
 	if (rows[(coor.row) - 1][coor.column] == 'X' && btn == 13)
-		return (write(1, "YOU WON, TRY THE BONUS ONE !\n", 30),
+		return (write(1, "Congratulations 🎉🥳🎊, YOU WON!\n", 40),
 			free(pic), exit (0));
 	else if (rows[(coor.row) + 1][coor.column] == 'X' && btn == 1)
-		return (write(1, "YOU WON, TRY THE BONUS ONE !\n", 30),
+		return (write(1, "Congratulations 🎉🥳🎊, YOU WON!\n", 40),
 			free(pic), exit (0));
 	else if (rows[coor.row][(coor.column) + 1] == 'X' && btn == 2)
-		return (write(1, "YOU WON, TRY THE BONUS ONE !\n", 30),
+		return (write(1, "Congratulations 🎉🥳🎊, YOU WON!\n", 40),
 			free(pic), exit (0));
 	else if (rows[coor.row][(coor.column) - 1] == 'X' && btn == 0)
-		return (write(1, "YOU WON, TRY THE BONUS ONE !\n", 30),
+		return (write(1, "Congratulations 🎉🥳🎊, YOU WON!\n", 40),
 			free(pic), exit (0));
 }
 

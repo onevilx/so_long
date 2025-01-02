@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 19:47:32 by yaboukir          #+#    #+#             */
-/*   Updated: 2024/12/31 20:14:41 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/01/01 21:10:11 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ int	main(int argc, char **argv)
 		map_parsing(rows, map);
 		player = ft_position(rows, 0);
 		rows = filling(rows, player.column, player.row);
+
 		check_and_rend(rows, map);
 	}
 }
